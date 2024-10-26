@@ -1,54 +1,50 @@
-import React from 'react'
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
-import { Check, Info } from 'lucide-react'
-
-const difficultyData = [
-    { name: 'Difficulty', value: 67 },
-    { name: 'Remaining', value: 33 },
-]
-
-const searchVolumeData = [
-    { name: 'Jan', value: 100 },
-    { name: 'Feb', value: 120 },
-    { name: 'Mar', value: 110 },
-    { name: 'Apr', value: 130 },
-    { name: 'May', value: 140 },
-    { name: 'Jun', value: 130 },
-    { name: 'Jul', value: 1200 },
-    { name: 'Aug', value: 150 },
-    { name: 'Sep', value: 160 },
-    { name: 'Oct', value: 170 },
-    { name: 'Nov', value: 180 },
-    { name: 'Dec', value: 190 },
-]
-
-const cpcData = [
-    { country: 'CH', value: 2.1 },
-    { country: 'IE', value: 2.2 },
-    { country: 'CA', value: 2.3 },
-    { country: 'UK', value: 2.4 },
-    { country: 'NZ', value: 2.5 },
-    { country: 'SG', value: 2.6 },
-    { country: 'AU', value: 4.8 },
-    { country: 'HK', value: 5.0 },
-    { country: 'US', value: 3.26 },
-]
-
-const globalVolumeData = [
-    { country: 'DE', volume: 33.1, percentage: '3%' },
-    { country: 'FR', volume: 33.1, percentage: '3%' },
-    // { country: 'UK', volume: 40.5, percentage: '4%' },
-    { country: 'JP', volume: 49.5, percentage: '5%' },
-    { country: 'IN', volume: 110, percentage: '11%' },
-    { country: 'US', volume: 201, percentage: '20%' },
-]
-
-export default function Optimize() {
+import { Check, Info } from "lucide-react";
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "react-feather";
+import {
+    Bar,
+    BarChart,
+    Cell,
+    Pie,
+    PieChart,
+    ResponsiveContainer,
+    XAxis,
+    YAxis,
+} from "recharts";
+import {
+    cpcData,
+    difficultyData,
+    globalVolumeData,
+    searchVolumeData,
+} from "../common/globalData";
+const itemPerAge = 6;
+const Optimize = () => {
+    // states-------
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(globalVolumeData.length / itemPerAge);
+    const startIndex = (currentPage - 1) * itemPerAge;
+    const currentItems = globalVolumeData.slice(
+        startIndex,
+        startIndex + itemPerAge
+    );
+    // functions -----------
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+    const handlePreviousPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
     return (
-        <div className="grid grid-cols-4 gap-4 px-3 py-3 bg-gray-100">
-            <div className="bg-white px-3 py-3 rounded-lg shadow">
-                <div className="flex justify-between items-baseline mb-4">
-                    <h2 className="text-sm font-semibold text-black uppercase">Difficulty</h2>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-24 min-h-screen  bg-gray-100 gap-4 px-3 py-3 ">
+            <div className="bg-white px-3 py-3 rounded-lg shadow md:max-h-[335px] h-auto pb-5">
+                <div className="flex justify-between items-baseline mb-2">
+                    <h2 className="text-[11px] font-semibold text-black uppercase">
+                        Difficulty
+                    </h2>
                     <div className="flex items-center">
                         <Check className="w-4 h-4 text-green-500 mr-1" />
                         <span className="text-sm text-green-500">Updated</span>
@@ -81,14 +77,17 @@ export default function Optimize() {
                         <span className="text-sm font-semibold">NOT EASY</span>
                     </div>
                 </div>
-                <div className="text-xs text-gray-500 mt-4 text-center">
-                    You will need a lot of high-quality referring domains and well-optimized content to rank high for this keyword.
+                <div className="text-xs text-gray-500 mt-2 text-center">
+                    You will need a lot of high-quality referring domains and
+                    well-optimized content to rank high for this keyword.
                 </div>
             </div>
-            <div>
-                <div className="bg-white px-3 py-3 rounded-lg shadow">
+            <div className="">
+                <div className="bg-white px-3 max-h-[250px] py-3 rounded-lg shadow  pb-5">
                     <div className="flex justify-between items-center mb-2">
-                        <h2 className="text-[11px] font-semibold text-black uppercase">Search Volume</h2>
+                        <h2 className="text-[11px] font-semibold text-black uppercase">
+                            Search Volume
+                        </h2>
                         <div className="flex items-center">
                             <Check className="w-4 h-4 text-green-500 mr-1" />
                             <span className="text-sm text-green-500">Updated</span>
@@ -112,33 +111,39 @@ export default function Optimize() {
                         <span>Jan 2024</span>
                         <span>Jul 2024</span>
                     </div>
-
                 </div>
-                <div className="bg-white p-2 rounded-lg shadow py-4 mt-4 px-4">
-                    <div className="flex gap-2 mb-2">
-                        <h2 className=" font-semibold text-black text-[11px] uppercase">Search Intent</h2>
-                        <Info className="w-4 h-4 text-gray-400" />
+                <div className="bg-white p-2 max-h-[70px] rounded-lg shadow py-2 mt-3 px-4 pb-5">
+                    <div className="flex gap-1 ">
+                        <h2 className=" font-semibold text-black text-[11px] uppercase">
+                            Search Intent
+                        </h2>
+                        <Info className="w-3 h-3 text-black" />
                     </div>
                     <div className="inline-block  px-3 py-1 bg-blue-100 text-blue-800 text-[11px] font-semibold rounded">
                         INFORMATIONAL
                     </div>
                 </div>
             </div>
-            <div className="bg-white px-3 py-3 rounded-lg shadow">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-sm font-semibold text-black uppercase">CPC</h2>
-                    <Info className="w-4 h-4 text-gray-400" />
+            <div className="bg-white px-3 py-3 rounded-lg shadow md:max-h-[335px] h-auto pb-5">
+                <div className="flex gap-2 items-center mb-4">
+                    <h2 className="text-[11px] m-0 font-semibold text-black uppercase">
+                        CPC
+                    </h2>
+                    <Info className="w-3 h-3 text-black" />
                 </div>
                 <div className="flex justify-between items-baseline">
                     <div className="text-lg font-bold mb-2">$3.26</div>
-                    <div className="text-xs text-gray-500 mb-2">COMPETITION: <span className="font-semibold">0.16</span> <Info className="w-3 h-3 text-gray-400 inline" /></div>
+                    <div className="text-xs text-gray-500 mb-2">
+                        COMPETITION: <span className="font-semibold">0.16</span>{" "}
+                        <Info className="w-3 h-3 text-black inline" />
+                    </div>
                 </div>
 
                 <ResponsiveContainer width="100%" height={200}>
                     <BarChart data={cpcData} layout="vertical">
                         <XAxis type="number" tick={{ fontSize: 12 }} />
                         <YAxis dataKey="country" type="category" tick={{ fontSize: 12 }} />
-                        <Bar dataKey="value" fill="#3B82F6">
+                        <Bar dataKey="value" fill="#3B82F6" radius={[4, 4, 4, 4]}>
                             {cpcData.map((entry, index) => (
                                 <Cell
                                     key={`cell-${index}`}
@@ -150,16 +155,23 @@ export default function Optimize() {
                 </ResponsiveContainer>
             </div>
 
-            <div className="bg-white px-3 py-3 rounded-lg shadow">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-sm font-semibold text-black uppercase">Global Volume</h2>
-                    <Info className="w-4 h-4 text-gray-400" />
+            <div className="bg-white px-3 py-3 relative rounded-lg shadow md:max-h-[335px] h-auto ">
+                <div className="flex gap-2 items-baseline  mb-4">
+                    <h2 className="text-[11px] m-0 font-semibold text-black uppercase">
+                        Global Volume
+                    </h2>
+                    <Info className="w-3 h-3 text-black " />
                 </div>
+
                 <div className="text-lg font-bold mb-2">995.1K</div>
-                <div className="space-y-2">
-                    {globalVolumeData.map((item, index) => (
+                <div className="space-y-2 mb-7">
+                    {currentItems.map((item, index) => (
                         <div key={index} className="flex items-center">
-                            <img src={`https://flagcdn.com/w20/${item.country.toLowerCase()}.png`} alt={item.country} className="mr-2" />
+                            <img
+                                src={`https://flagcdn.com/w20/${item.country.toLowerCase()}.png`}
+                                alt={item.country}
+                                className="mr-2"
+                            />
                             <span className="text-sm font-semibold w-8">{item.country}</span>
                             <div className="flex-grow">
                                 <div className="h-4 bg-gray-200 rounded-full overflow-hidden">
@@ -170,13 +182,35 @@ export default function Optimize() {
                                 </div>
                             </div>
                             <span className="text-sm font-semibold ml-2">{item.volume}K</span>
-                            <span className="text-xs text-gray-500 ml-2 w-8">{item.percentage}</span>
+                            <span className="text-xs text-gray-500 ml-2 w-8">
+                                {item.percentage}
+                            </span>
                         </div>
                     ))}
                 </div>
-                <div className="text-xs text-gray-500 mt-2 text-right">1 - 6 of 8</div>
+                <div className="flex justify-between items-center  text-xs text-gray-500 mt-2">
+                    <button
+                        onClick={handlePreviousPage}
+                        disabled={currentPage === 1}
+                        className="focus:outline-none"
+                    >
+                        <ChevronLeft size={16} />
+                    </button>
+                    <span>
+                        {startIndex + 1} -{" "}
+                        {Math.min(startIndex + itemPerAge, globalVolumeData.length)} of{" "}
+                        {globalVolumeData.length}
+                    </span>
+                    <button
+                        onClick={handleNextPage}
+                        disabled={currentPage === totalPages}
+                        className="focus:outline-none"
+                    >
+                        <ChevronRight size={16} />
+                    </button>
+                </div>
             </div>
-
         </div>
-    )
-}
+    );
+};
+export default Optimize;

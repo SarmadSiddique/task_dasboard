@@ -26,6 +26,8 @@ import x from "../assets/png/x.png";
 import contact_ from "../assets/png/contact_.png";
 import Loc_ from "../assets/png/Loc_.png";
 import facebook from "../assets/png/fb_zikr.png";
+import search from "../assets/png/search.png";
+
 
 
 
@@ -103,6 +105,7 @@ export {
   mockup,
   blog4,
   social1,
+  search,
   social2,
   hands,
   blog5,

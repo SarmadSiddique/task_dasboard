@@ -65,14 +65,17 @@
   font-family: "gilroy-regular";
 }
 
-
 :where(.css-dev-only-do-not-override-mzwlov).ant-list * {
   min-height: auto !important;
 }
 
 .bg_main {
-  background: linear-gradient(0deg, #1A1E21, #1A1E21),
-    linear-gradient(155.37deg, rgba(172, 139, 73, 0.34) 14.61%, rgba(0, 0, 0, 0.34) 51.93%),
+  background: linear-gradient(0deg, #1a1e21, #1a1e21),
+    linear-gradient(
+      155.37deg,
+      rgba(172, 139, 73, 0.34) 14.61%,
+      rgba(0, 0, 0, 0.34) 51.93%
+    ),
     linear-gradient(0deg, rgba(26, 30, 33, 0.2), rgba(26, 30, 33, 0.2));
 }
 
@@ -88,9 +91,8 @@
 .text_primary {
   color: var(--primary);
 }
-.bg-dark_brown{
+.bg-dark_brown {
   background-color: var(--dark_brown);
-
 }
 
 .text_secondary {
@@ -106,60 +108,56 @@
   background-repeat: no-repeat;
   background-size: 575px;
   background-position: right;
-
 }
-.bg-img2{
+.bg-img2 {
   display: none !important;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
   .bg-img {
     background-image: url(../assets/png/Visuals.png);
     background-size: 405px;
-
   }
-  .bg-img2{
+  .bg-img2 {
     display: none !important;
   }
-}@media screen and (max-width:921px) {
+}
+@media screen and (max-width: 921px) {
   .bg-img {
     background-image: none;
   }
-  .bg-img2{
+  .bg-img2 {
     background-repeat: no-repeat;
     max-width: 575px;
     display: block !important;
   }
-  
 }
-.line_height{
+.line_height {
   line-height: 65px !important;
 }
-.border_{
-  content: '';
+.border_ {
+  content: "";
   display: block;
   height: 5px;
   width: 5rem;
   background-color: var(--white);
-
 }
-.border_gold{
-  height: 1px ;
-  content: '';
-  background-color: #AC8B49;
+.border_gold {
+  height: 1px;
+  content: "";
+  background-color: #ac8b49;
   width: 100%;
 }
-.social_plateform_btn{
-  border: 1px solid #AC8B49 !important;
+.social_plateform_btn {
+  border: 1px solid #ac8b49 !important;
   border-radius: 8px;
   padding: 16px 48px 16px 48px;
-  font-family: 'gilroy-medium';
+  font-family: "gilroy-medium";
 }
-.accordion-collapse .collapse .show>.accordion-body{
-z-index: 999 !important;
-display: block !important;
-
+.accordion-collapse .collapse .show > .accordion-body {
+  z-index: 999 !important;
+  display: block !important;
 }
-.bg_image_footer{
+.bg_image_footer {
   background-image: url(../assets/png/masjid.png);
   background-repeat: no-repeat;
   background-size: 100% 100% !important;
@@ -169,9 +167,32 @@ display: block !important;
   justify-content: center; */
   /* height: 40rem !important; */
 }
-.border_white{
-  height: 1px ;
-  content: '';
+.border_white {
+  height: 1px;
+  content: "";
   background-color: var(--white);
   width: 100%;
+}
+/* Custom CSS for increasing the width of the flags dropdown options */
+.ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
+  width: 300px !important; /* Adjust width as needed */
+}
+@media screen and (max-width: 500px) {
+  .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
+    width: 80px !important; /* Adjust width as needed */
+  }
+}
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+  border: none !important;
+}
+.custom_:focus {
+  box-shadow: none !important;
+}
+.custom_border {
+  border: 1px solid #d4d4d4;
+}
+
+.custom_border:focus {
+  outline: none;
+  box-shadow: none;
 }
