@@ -95,11 +95,12 @@ const Optimize = () => {
                     </div>
                     <div className="flex items-center mb-2">
                         <div className="text-lg font-bold">201K</div>
-                        {/* <div className="ml-2 px-3 py-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">
-                            Updated
-                        </div> */}
+
                     </div>
-                    <div className="text-sm text-gray-500 mb-2">1200k</div>
+                    <div className="flex items-center gap-3">
+                        <div className="text-sm text-gray-500 mb-2">1200k</div>
+                        <div className="block_div"></div>
+                    </div>
                     <ResponsiveContainer width="100%" height={100}>
                         <BarChart data={searchVolumeData} barSize={8}>
                             <Bar dataKey="value" fill="#3B82F6" />
