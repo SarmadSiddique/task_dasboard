@@ -1,0 +1,177 @@
+@import url("./fonts.css");
+@import url("./color.css");
+
+.popins-regular {
+  font-family: "popins-regular";
+}
+
+.popins-bold {
+  font-family: "popins-bold";
+}
+
+.popins-medium {
+  font-family: "popins-medium";
+}
+
+.popins-semibold {
+  font-family: "popins-semibold";
+}
+
+.popins-light {
+  font-family: "popins-light";
+}
+
+.inter_regular {
+  font-family: "inter_regular";
+}
+
+.inter_bold {
+  font-family: "inter_bold";
+}
+
+.inter_medium {
+  font-family: "inter_medium";
+}
+
+.inter_semibold {
+  font-family: "inter_semibold";
+}
+
+.inter_light {
+  font-family: "inter_light";
+}
+
+.gilroy-regular {
+  font-family: "gilroy-regular";
+}
+
+.gilroy-bold {
+  font-family: "gilroy-bold";
+}
+
+.gilroy-medium {
+  font-family: "gilroy-medium";
+}
+
+.gilroy-heavy {
+  font-family: "gilroy-heavy";
+}
+
+.gilroy-light {
+  font-family: "gilroy-light";
+}
+
+* {
+  font-family: "gilroy-regular";
+}
+
+
+:where(.css-dev-only-do-not-override-mzwlov).ant-list * {
+  min-height: auto !important;
+}
+
+.bg_main {
+  background: linear-gradient(0deg, #1A1E21, #1A1E21),
+    linear-gradient(155.37deg, rgba(172, 139, 73, 0.34) 14.61%, rgba(0, 0, 0, 0.34) 51.93%),
+    linear-gradient(0deg, rgba(26, 30, 33, 0.2), rgba(26, 30, 33, 0.2));
+}
+
+.bg_primary {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(26, 30, 33, 0.2), rgba(26, 30, 33, 0.2));
+}
+
+.bg_secondary {
+  background-color: var(--secondary);
+}
+
+.text_primary {
+  color: var(--primary);
+}
+.bg-dark_brown{
+  background-color: var(--dark_brown);
+
+}
+
+.text_secondary {
+  color: var(--secondary);
+}
+
+.text_white {
+  color: var(--white);
+}
+
+.bg-img {
+  background-image: url(../assets/png/Visuals.png);
+  background-repeat: no-repeat;
+  background-size: 575px;
+  background-position: right;
+
+}
+.bg-img2{
+  display: none !important;
+}
+@media screen and (max-width:1200px) {
+  .bg-img {
+    background-image: url(../assets/png/Visuals.png);
+    background-size: 405px;
+
+  }
+  .bg-img2{
+    display: none !important;
+  }
+}@media screen and (max-width:921px) {
+  .bg-img {
+    background-image: none;
+  }
+  .bg-img2{
+    background-repeat: no-repeat;
+    max-width: 575px;
+    display: block !important;
+  }
+  
+}
+.line_height{
+  line-height: 65px !important;
+}
+.border_{
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5rem;
+  background-color: var(--white);
+
+}
+.border_gold{
+  height: 1px ;
+  content: '';
+  background-color: #AC8B49;
+  width: 100%;
+}
+.social_plateform_btn{
+  border: 1px solid #AC8B49 !important;
+  border-radius: 8px;
+  padding: 16px 48px 16px 48px;
+  font-family: 'gilroy-medium';
+}
+.accordion-collapse .collapse .show>.accordion-body{
+z-index: 999 !important;
+display: block !important;
+
+}
+.bg_image_footer{
+  background-image: url(../assets/png/masjid.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100% !important;
+  background-position: center;
+  /* content:'';
+  display: flex;
+  justify-content: center; */
+  /* height: 40rem !important; */
+}
+.border_white{
+  height: 1px ;
+  content: '';
+  background-color: var(--white);
+  width: 100%;
+}

@@ -1,0 +1,129 @@
+/* ---------------------popins ::Start---------------------- */
+@font-face {
+    font-family: "popins-bold";
+    src: url('./Popins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: "popins-medium";
+    src: url('./Popins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: "popins-regular";
+    src: url('./Popins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: "popins-semibold";
+    src: url('./Popins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "popins-light";
+    src: url('./Popins/Poppins-Light.ttf');
+}
+
+/* ---------------------Syne ::Start---------------------- */
+@font-face {
+    font-family: "syne_bold";
+    src: url('./Syne/Syne-Bold.ttf');
+}
+
+@font-face {
+    font-family: "syne_medium";
+    src: url('./Syne/Syne-Medium.ttf');
+}
+
+@font-face {
+    font-family: "syne_regular";
+    src: url('./Syne/Syne-Regular.ttf');
+}
+
+@font-face {
+    font-family: "syne_semibold";
+    src: url('./Syne/Syne-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "syne_exBold";
+    src: url('./Syne/Syne-ExtraBold.ttf');
+}
+
+/* ---------------------Inter ::Start---------------------- */
+@font-face {
+    font-family: "inter_bold";
+    src: url('./Inter/Inter-Bold.ttf');
+}
+
+@font-face {
+    font-family: "inter_medium";
+    src: url('./Inter/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: "inter_regular";
+    src: url('./Inter/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: "inter_semibold";
+    src: url('./Inter/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "inter_light";
+    src: url('./Inter/Inter-Light.ttf');
+}
+
+/* ---------------------Work Sans ::Start---------------------- */
+@font-face {
+    font-family: "work_sans_bold";
+    src: url('./Work_Sans/WorkSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: "work_sans_medium";
+    src: url('./Work_Sans/WorkSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: "work_sans_regular";
+    src: url('./Work_Sans/WorkSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "work_sans_semibold";
+    src: url('./Work_Sans/WorkSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "work_sans_light";
+    src: url('./Work_Sans/WorkSans-Light.ttf');
+}
+
+/* ---------------------Gilroy ::Start---------------------- */
+@font-face {
+    font-family: "gilroy-heavy";
+    src: url('./gilroy-bold/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "gilroy-bold";
+    src: url('./gilroy-bold/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: "gilroy-medium";
+    src: url('./gilroy-bold/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: "gilroy-regular";
+    src: url('./gilroy-bold/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: "gilroy-light";
+    src: url('./gilroy-bold/Gilroy-Light.ttf');
+}

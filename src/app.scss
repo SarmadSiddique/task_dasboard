@@ -1,0 +1,35 @@
+@import url(./components/style/bootstrap/custom.scss);
+
+.fea {
+    stroke-width: 1.8;
+
+    &.icon-sm {
+        height: 16px;
+        width: 16px;
+    }
+
+    &.icon-ex-md {
+        height: 20px;
+        min-width: 20px;
+    }
+
+    &.icon-m-md {
+        height: 28px;
+        width: 28px;
+    }
+
+    &.icon-md {
+        height: 35px;
+        width: 35px;
+    }
+
+    &.icon-lg {
+        height: 42px;
+        width: 42px;
+    }
+
+    &.icon-ex-lg {
+        height: 52px;
+        width: 52px;
+    }
+}
