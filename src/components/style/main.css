@@ -177,6 +177,11 @@
 .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
   width: 300px !important; /* Adjust width as needed */
 }
+@media screen and (max-width: 560px) {
+  .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
+    width: 180px !important; /* Adjust width as needed */
+  }
+}
 @media screen and (max-width: 500px) {
   .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
     width: 80px !important; /* Adjust width as needed */
