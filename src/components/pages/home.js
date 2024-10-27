@@ -151,7 +151,7 @@ const Home = () => {
                 className=" rounded px-3 py-1 mt-1 w-40 bg-gray-50 custom_border text-gray-700 "
               />
             </div>
-            <button className="bg-gray-50 hover:bg-gray-300 text-black custom_border  font-bold text-[12px] py-2 px-4 rounded md:mt-6 xss:mt-0 ">
+            <button className="bg-gray-50 hover:bg-gray-300 text-black custom_border mt-4  font-bold text-[12px] py-2 px-4 rounded md:mt-6 xss:mt-0 ">
               BULK KEYWORD ANALYSIS
             </button>
 
